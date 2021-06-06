@@ -1,5 +1,5 @@
 /*
- * Minimal and simple implementation of jest test
+ * Minimal and simple implementation of jest test function
  */
 const { sum, subtract, isEvenNumber } = require("../math");
 let result, expected;
@@ -18,7 +18,12 @@ test("Subtract 10 - 6", () => {
 
 test("Test 6 is even", () => {
   result = isEvenNumber(6);
-  expect(result).toBeTrue();
+  expect(result).toBeTruthy();
+});
+
+test("Test 5 is Not even", () => {
+  result = isEvenNumber(5);
+  expect(result).toBeTruthy();
 });
 
 function test(title, callback) {
@@ -38,9 +43,11 @@ function expect(actual) {
         throw new Error(`${actual} is not equal to ${expected}`);
       }
     },
-    toBeTrue() {
-      if (!actual) {
-        throw new Error("The result is not true!");
+    toBeTruthy() {
+      if (actual) {
+        return true;
+      } else {
+        return false;
       }
     },
   };

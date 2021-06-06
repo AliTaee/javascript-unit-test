@@ -1,5 +1,5 @@
 /*
- * Every assertion Created from two part
+ * Every assertion created from two part
  * Result: Is what our program output
  * Expected: What our expectation and correct output
  * Then we compare result with expected
