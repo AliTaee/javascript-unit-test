@@ -1,3 +1,6 @@
+/*
+ * Minimal and simple implementation of jest expect and toBe, toBeTrue
+ */
 const { sum, subtract, isEvenNumber } = require("../math");
 let result, expected;
 

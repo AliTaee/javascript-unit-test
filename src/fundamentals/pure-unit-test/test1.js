@@ -1,3 +1,6 @@
+/*
+ * Pure simple unit tests
+ */
 const { sum, subtract } = require("../math");
 
 let result, expected;

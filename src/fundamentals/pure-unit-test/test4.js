@@ -1,3 +1,6 @@
+/*
+ * Minimal and simple implementation of jest test
+ */
 const { sum, subtract, isEvenNumber } = require("../math");
 let result, expected;
 
