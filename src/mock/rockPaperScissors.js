@@ -1,29 +1,29 @@
 const rockPaperScissors = (player1, player2) => {
-  const PAPER = "PAPER"; // 🪨
-  const ROCK = "ROCK"; // 🧾
-  const SCISSORS = "SCISSORS"; // ✂️
+  const PAPER = 'PAPER' // 🪨
+  const ROCK = 'ROCK' // 🧾
+  const SCISSORS = 'SCISSORS' // ✂️
 
-  let player1Tool = null;
-  let player2Tool = null;
+  let player1Tool = null
+  let player2Tool = null
 
   function generateUserTool() {
-    const chanceNumber = Math.round(Math.random() * (3 - 1) + 1);
+    const chanceNumber = Math.round(Math.random() * (3 - 1) + 1)
 
     switch (chanceNumber) {
       case 1:
-        return PAPER;
+        return PAPER
       case 2:
-        return ROCK;
+        return ROCK
       case 3:
-        return SCISSORS;
+        return SCISSORS
     }
   }
 
-  player1Tool = generateUserTool();
-  player2Tool = generateUserTool();
+  player1Tool = generateUserTool()
+  player2Tool = generateUserTool()
 
   if (player1Tool === player2Tool) {
-    return "even";
+    return 'even'
   }
 
   if (
@@ -31,10 +31,10 @@ const rockPaperScissors = (player1, player2) => {
     (player1Tool === ROCK && player2Tool === SCISSORS) ||
     (player1Tool === SCISSORS && player2Tool === PAPER)
   ) {
-    return player1;
+    return player1
   } else {
-    return player2;
+    return player2
   }
-};
+}
 
-module.exports = { rockPaperScissors };
+module.exports = { rockPaperScissors }
